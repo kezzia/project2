@@ -6,3 +6,8 @@ sum_up_numbers_general([H|T],N):-	%otherwise
 sum_up_numbers_general([H|T],N):-	%else
     \+number(H),                        %if new value is non numerical
     sum_up_numbers_general(T,N).	%ignore it
+
+
+sum_up_up_numbers_simple([],0).
+
+

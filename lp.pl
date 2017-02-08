@@ -58,7 +58,9 @@ sum_up_numbers_general([H|T], N):-  %else
 %MIN ABOVE MIN
 min_above_min([],[],false).         %if both lists are empty, false
 
-
+min_above_min([H1|T1],[H2|T2],N):-
+    append([H2|T2],[H1|T1],L),
+    write(L),nl.
 
 
 

@@ -1,13 +1,17 @@
 %SUM UP NUMBERS SIMPLE
 sum_up_numbers_simple([], 0).       %if the list is empty, return True
 
+sum_up_numbers_simple([H|T],N):-    %otherwise,
+    is_list(H),                     %if new value is a nested list
+    sum_up_numbers_simple(T,N).    %ignore it
+
 sum_up_numbers_simple([H|T], N):-   %otherwise
     number(H),                      %if new value is numerical
     sum_up_numbers_simple(T,N1),    %call pred on the current sum rest of the list
     N is N1+H.                      %N = current sum + new value
 
 sum_up_numbers_simple([H|T], N):-   %else
-	\+number(H),                %if new value is non numerical
+    \+number(H),                    %if new value is non numerical
     sum_up_numbers_simple(T,N).	    %ignore it
 
 

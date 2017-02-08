@@ -6,6 +6,12 @@ sum_up_numbers_simple([H|T], N):-   %otherwise
     sum_up_numbers_simple(T,N1),    %call pred on the current sum rest of the list
     N is N1+H.                      %N = current sum + new value
 
+sum_up_numbers_simple([H|T], N):-   %else
+	\+number(H),                %if new value is non numerical
+    sum_up_numbers_simple(T,N).	    %ignore it
+
+
+
 
 
 %SUM UP NUMBERS GENERAL

@@ -50,3 +50,21 @@ sum_up_numbers_general([H|T], N):-  %otherwise
 sum_up_numbers_general([H|T], N):-  %else
 	\+number(H),                %if new value is non numerical
     sum_up_numbers_general(T,N).    %ignore it
+
+
+
+
+
+%MIN ABOVE MIN
+min_above_min([],[],false).         %if both lists are empty, false
+
+
+
+
+
+
+
+
+
+
+
